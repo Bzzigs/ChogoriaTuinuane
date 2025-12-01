@@ -13,51 +13,73 @@
 
 </head> 
 <body>
-    <div id="header">
+    <header>
         <nav>
             <div class="container">
+                <ul class="sidebar">
+                    <li onclick=hidesidebar()><a><i class="fa-solid fa-x"></i></a></li>
+                    <li class="itemssidebar"><a href="about.html">About us</a></li>
+                    <li class="itemssidebar"><a href="#">Contact us</a></li>
+                    <li class="itemssidebar"><a><button id="herobtn" >Donate</button></a></li>
+                </ul>
+
                 <ul>
                     <li id="logo"><a href="index.html"><span style="color: #35EAF0;">Chogoria </span><span style="color: #F018D3;">Tuinuane</span></a></li>
-                    <li class="items"><a href="#">About us</a></li>
-                    <li class="items"><a href="#">Contact us</a></li>
-                    <li class="items"><button id="donatebtnheader" >Donate</button></a></li>
-                </ul>
+                    <li class="items" id="hideonmobile"><a href="about.html">About us</a></li>
+                    <li class="items" id="hideonmobile"><a href="#">Contact us</a></li>
+                    <li  id="hideonmobile"><a><button id="donatebtnheader">Donate</button></a></li>
+                    <li class="items" id="menu-icon" onclick=showsidebar()><a style="color: #F018D3; font-size: 25px;"><i class="fa-solid fa-bars"></i></a></li>
+
             </div>
         </nav>
+    </header>
 
-        <div id="herosection">
-            <div id="herotitle"><span style="color: #35EAF0;">GIVING HOPE</span> <span style="font-size: 3vw;">|</span> <span style="color: #F018D3;">CHANGING LIVES</span></div>
-            <div id="herotext">With the aim of enabling every child enrolled at Chogoria Boys High school to complete their course and realize their dreams. Chogoria Tuinuane is appealing to well-wishers to come on board and help raise funds towards a noble cause</div>
-            <div id="supporttxt">Support us</div>
-            <div id="arrow">↓</div>
-            <button id="herobtn">DONATE</button>
+    <main>
+        <div id="maincontainer">
+            <div class="herosectiondisplay">
+                <div id="herosection">
+                    <div id="herotitle"><span style="color: #35EAF0;">GIVING HOPE</span> <span style="font-size: clamp(0.5em, calc(1vw + 1rem), 2em);">|</span> <span style="color: #F018D3;">CHANGING LIVES</span></div>
+                    <div id="herotext">With the aim of enabling every child enrolled at Chogoria Boys High school to complete their course and realize their dreams. Chogoria Tuinuane is appealing to well-wishers to come on board and help raise funds towards a noble cause</div>
+                    <div id="supporttxt">Support us</div>
+                    <div id="arrow">↓</div>
+                    <button id="herobtn">DONATE</button>
+                </div>
+                <div class="heroconatinerimg">
+                    <div class="heroimg" id="heroimg1"></div>
+                    <div class="heroimg" id="heroimg2"></div>
+                </div>                
+            </div>
+            <div id="moneyraisedtxt">With over one million raised for needy students to date <br> <br> <span> <span style="color: #F018D3;">Join us</span>  and <span style="color: #35EAF0;">Give Hope</span> </span> </div>
         </div>
-        <div class="heroconatinerimg">
-            <div class="heroimg" id="heroimg1"></div>
-            <div class="heroimg" id="heroimg2"></div>
-        </div>
-        <div id="moneyraisedtxt">Over one million raised for needy students</div>
+    </main>
 
-    </div>
 
     <footer>
-        <div class="footercontainer">
-                <ul>
-                    <li id="logofooter"><a href="index.html"><span style="color: #35EAF0;">Chogoria </span><span style="color: #F018D3;">Tuinuane</span></a></li>
-                    <li class="itemsfooter"><a href="#">About us</a></li>
-                    <li class="itemsfooter"><a href="#">Contact us</a></li>
-                    <li class="itemsfooter"><button id="donatebtnfooter" >Donate</button></a></li>
-                </ul>
-                
-                
-                    <div class="Icons"><a href="tel: +25471234568"><i class="fa-solid fa-phone"></i></a></div>
-                    <div class="Icons"><a href="mailto: defaultemial@gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
-                    <div class="Icons"><a href="https://wa.me/254712345678"><i class="fa-brands fa-whatsapp"></i></a></div>
-                
+            <ul>
+                <li id="logofooter"><a href="index.html"><span style="color: #35EAF0;">Chogoria </span><span style="color: #F018D3;">Tuinuane</span></a></li>
 
-                <div id="watermark" class="Icons"> © Designed and developed by Victor Mwenda</div>
+                <li class="Icons">
+                    <a href="tel: +25471234568"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto: defaultemial@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/254712345678"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>      
+            </ul>
+             
+
+            <div id="watermark"> © Designed and developed by Victor Mwenda</div>
                 
-        </div>
+        
     </footer>
+    <script>
+        function showsidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.right = '0';
+        }
+        function hidesidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.right = '-100%';
+        }
+
+    </script>
 </body>
 </html>

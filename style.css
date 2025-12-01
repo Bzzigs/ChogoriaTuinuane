@@ -11,50 +11,60 @@ html{
 }
 
 body{
-    background-color: #f8ebf9;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #f8ebf9;
+    min-height: 100%;
+
 }
 
 
-
+/* Header */
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     background-color: #F9F6F9;
-    height: 5em;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    height: 100px;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 10px;
-    position: relative;
-    font-family: 'Inter', sans-serif;
+nav ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav li{
+    height: 50px;
 }
 nav ul li a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
     text-decoration: none;
+    align-items: center;
     color: inherit;
+    margin-top: 30px;
+    position: relative;
 }
 
+nav li:first-child{
+    margin-right: auto;
+}
 #logo{
-    font-size: 6vw;
-    margin-left: 2px;
-    margin-right: 28px;
+    font-size: clamp(1.2em, calc(2vw + 1rem), 4em);
+    
 }
 
 .items{
-    font-size: 2.3vw;
+    font-size: clamp(0.2em, calc(0.2vw + 1rem), 1.8em);
 }
 
 #donatebtnheader{
     background-color: #35EAF0;
-    height: 2.5em;
-    width: 4.3em;
-    font-size: 3vw;
+    height: auto;
+    padding: 0.5em;
+    font-size: clamp(0.2em, calc(0.5vw + 1rem), 1.5em);
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -62,30 +72,69 @@ nav ul li a{
     transition: transform 300ms ease;
 }
 nav ul li.items a::after{
-    content: '';
-    width: 0;
+    content:"";
     height:3px;
     background: #e976c6;
     position: absolute;
     left: 0;
+    width: 100%;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
+    transform: scaleX(0);
 }
 
 nav ul li.items a:hover::after{
-    width: 100%;
+    transform: scale(1);
 }
 
 #donatebtnheader:hover{
-    transform: scale(1.1);
+    transform: scaleX(1.1);
+}
+/* sidebar */
+.itemssidebar :hover{
+    background-color: #FFFFFF;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    z-index: 999;
+    height: 100%;
+    background-color: #f8ebf9da;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    transition: right 800ms cubic-bezier(0.2, 0.8, 0.2, 1); /* slower & smoother */
+
+}
+.itemssidebar{
+    font-size: 1.4em;
+    width: 100%;
+}
+#menu-icon{
+    display: none;
 }
 
-#herosection{
+/* Main */
+#maincontainer{
     border: none;
-    height: 55vw;
+    height: auto;
+    text-align: center;
+}
+.herosectiondisplay{
+    display: flex;
+    gap: 3vw;
+
+}
+#herosection{
+    margin-top: 5vw;
+    border: none;
     width: 50vw;
-    position: absolute;
-    margin-top: 10vw;
     margin-left: 3vw;
     border-radius: 10px;
     background-color: #F9F6F9;
@@ -97,19 +146,18 @@ nav ul li.items a:hover::after{
 
     font-family: "Inria Sans", sans-serif;
     font-weight: bold;
+    font-size: clamp(0.4em, calc(0.5vw + 1rem), 4em);
 
 }
 #herotext{
     margin-top: 20px;
     line-height: 1.1;
     font-family: "Inria Sans", sans-serif;
-    font-size: 3vw;
+    font-size: clamp(0.4em, calc(1.3vw + 1rem), 3em);
 }
 
 .heroconatinerimg{
-    position: absolute;
-    left: 58vw;
-    top: 22.5vw;
+    margin-top: 5vw;            
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -118,7 +166,7 @@ nav ul li.items a:hover::after{
 .heroimg{
     border: none;
     width: 40vw;
-    height: 26vw;
+    height: 18em;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     transition: transform 300ms ease;
@@ -143,21 +191,20 @@ nav ul li.items a:hover::after{
 
 #supporttxt{
     margin-top: 20px;
-    font-size: 3.5vw;
+    font-size: clamp(0.4em, calc(1.3vw + 1rem), 3em);
     color: #F018D3;
     font-family: "Inria Sans", sans-serif;
 
 }
 #arrow{
-    font-size: 3.5vw;
+    font-size: clamp(0.4em, calc(1.3vw + 1rem), 3em);
     font-weight: bold;
 }
 
 #herobtn{
     background-color: #35EAF0;
-    height: 2.5em;
-    width: 5em;
-    font-size: 3vw;
+    padding: 0.8em;
+    font-size: clamp(0.4em, calc(0.5vw + 1rem), 3em);
     text-align: center;
     border: none;
     border-radius: 15px;
@@ -172,133 +219,127 @@ nav ul li.items a:hover::after{
 
 
 #moneyraisedtxt{
-    position: absolute;
-    top: 90vw;
-    left:18vw;
-    font-size: 3.5vw;
+    font-size: clamp(0.4em, calc(1.3vw + 1rem), 3em);
     font-family: "Inria Sans", sans-serif;
     font-weight: 500;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
+/* footer section */
 footer{
     margin-top: auto;
-    background-color: #FFFFFF;
-    width: 100%;
-    height: 10rem;
+    background-color: #F9F6F9;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.199);
+    text-align: center;
+}
+
+
+footer ul{
     display: flex;
-    align-items:start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-
-}
-.footercontainer ul li{
-    display: inline-block;
+    flex-direction: row;
+    align-items: center;
     list-style: none;
-    margin: 10px 15px;
-    position: relative;
-    font-family: 'Inter', sans-serif;
-
+    justify-content: flex-end;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+footer ul #logofooter{
+    margin-right: auto;
+}
+footer ul .Icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    font-size: clamp(0.8em, calc(-1vw + 1rem), 4em);
+    margin-top: 0.5em;
+    margin-right: 3em;
+    color:#35EAF0;
+    transition: transform 300ms ease;
 }
 
-
-.footercontainer ul li a{
-    text-decoration: none;
+.Icons a:hover{
+    transform: scale(1.1);
+}
+footer ul a{
     color: inherit;
-    font-family: "Inria Sans", sans-serif;
+    text-decoration: none;
 }
+
+
 
 #logofooter{
-    margin-right: 10px;
-    font-size: 5vw;
-    font-family: "Inria Sans", sans-serif;
+    font-size: clamp(1.2em, calc(1vw + 1rem), 4em);
 
 }
 
 #donatebtnfooter{
     background-color: #35EAF0;
+    height: auto;
+    padding: 0.4em;
+    text-align: center;
     border: none;
-    font-size: 4vw;
-    margin-left: 5px;
-    width: 15vw;
-    height: 8vw;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 300ms ease;
-} 
-
-#donatebtnfooter:hover{
-    transform: scale(1.1);
 }
-
-.footercontainer .Icons{
-    display: inline-block;
-    font-size: 3vw;
-    justify-content: space-between;
-    margin: 0px 10px;
-    position: relative;
-    left: 14vw;
-
-}
-.footercontainer .Icons a{
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 300ms ease;
-}
-.footercontainer .Icons a:hover{
-    transform: scale(1.1);
-}
-
 
 #watermark{
-    font-size: 2vw;
-    font-family: "Inria Sans", sans-serif;
-    position: relative;
-    margin-left: 10vw;
-    
+    border:none;
+    font-size: clamp(0.8em, calc(-1vw + 1rem), 4em);
 
 }
 
 
 
-@media screen and (max-width: 640px) {
-    #logo{
-        font-size: 5vw;
-        margin-right: 10px;
+/* Mobile devices and smaller screens */
+/* ---------------------------- */
+/* sidebar */
+@media screen and (max-width: 900px) {
+    #hideonmobile{
+        display: none;
+    }
+    .sidebar{
+        right: 0;
+    }
+    #menu-icon{
+    display: block;
+    }
+}
+
+/* hero section rearrangement */
+@media screen and (max-width: 1024px) {
+
+    .herosectiondisplay{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        border: none;
+        align-items: center;
     }
     #herosection{
-        position: absolute;
-        position: absolute;
         top: 14vw;
         margin-left: 0;
         width: 100%;
-        height: 60vw;
 
     }
-    #herotext{
-        font-size: 3.5vw;
-        line-height: 1.5;
-    }
+
     .heroconatinerimg{
         display: flex;
         flex-direction: row;
-        position: absolute;
-        left: 8vw;
-        top: 89vw;
     }
-    #moneyraisedtxt{
-        position: absolute;
-        top: 124vw;
-    }
-    #logofooter{
-        font-size: 3.5vw;
-    }
-    .footercontainer ul li{
-        margin: 10px 10px;
-        font-size: 3vw;
-    }
-
-
+    /* footer ul .Icons{
+        font-size: clamp(1em, calc(-2vw + 1rem), 4em);
+    } */
 
 }
+
+
+
+
+
+
+
+
+
