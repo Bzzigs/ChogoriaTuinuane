@@ -20,7 +20,6 @@ body{
 
 /* main */
 main{
-  border: solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +36,9 @@ main{
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: solid #f018d32a;
+    border: solid rgba(0, 0, 0, 0.651);
+    border-radius: 0.5em;
+
 }
 
 /* Hide the images by default */

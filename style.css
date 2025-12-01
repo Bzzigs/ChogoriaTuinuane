@@ -301,7 +301,7 @@ footer ul a{
         display: none;
     }
     .sidebar{
-        right: 0;
+        right: -100%;
     }
     #menu-icon{
     display: block;
