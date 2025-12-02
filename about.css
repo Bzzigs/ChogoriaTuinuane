@@ -175,6 +175,10 @@ main{
   font-family: "Inclusive Sans", sans-serif;
 
 }
+.valuetitle{
+  font-size: clamp(0.2em, calc(0.5vw + 1rem), 3em);
+  font-weight: 400;
+}
 @media screen and (max-width:600px){
   .maincontent{
     display: flex;

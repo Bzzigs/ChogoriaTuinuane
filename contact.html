@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <script src="https://kit.fontawesome.com/94a7d13274.js" crossorigin="anonymous"></script>
 
 
@@ -33,27 +34,22 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <div id="maincontainer">
-            <div class="herosectiondisplay">
-                <div id="herosection">
-                    <div id="herotitle"><span style="color: #35EAF0;">GIVING HOPE</span> <span style="font-size: clamp(0.5em, calc(1vw + 1rem), 2em);">|</span> <span style="color: #F018D3;">CHANGING LIVES</span></div>
-                    <div id="herotext">With the aim of enabling every child enrolled at Chogoria Boys High school to complete their course and realize their dreams. Chogoria Tuinuane is appealing to well-wishers to come on board and help raise funds towards a noble cause</div>
-                    <div id="supporttxt">Support us</div>
-                    <div id="arrow">↓</div>
-                    <button id="herobtn">DONATE</button>
+        <div class="formcontainer">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contactform">
+                <div class="contacttitle">
+                    <div class="contactitle">Get in touch</div>
+                    <hr>
                 </div>
-                <div class="heroconatinerimg">
-                    <div class="heroimg" id="heroimg1"></div>
-                    <div class="heroimg" id="heroimg2"></div>
-                </div>                
-            </div>
-            <div id="moneyraisedtxt">With over one million raised for needy students to date <br> <br> <span> <span style="color: #F018D3;">Join us</span>  and <span style="color: #35EAF0;">Give Hope</span> </span> </div>
+                <input type="hidden" name="access_key" value="2d7564aa-ae4c-43c1-a68d-b2ef3cf2d243">
+                <input type="text" name="name" placeholder="Your name" required class="inputdetails">
+                <input type="email" name="email" placeholder="Your email" required class="inputdetails">
+                <textarea name="message" placeholder="Your message" class="inputdetails" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
         </div>
     </main>
-
-
     <footer>
             <ul>
                 <li id="logofooter"><a href="index.html"><span style="color: #35EAF0;">Chogoria </span><span style="color: #F018D3;">Tuinuane</span></a></li>
