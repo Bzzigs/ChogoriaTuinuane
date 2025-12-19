@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donate.css">
     <script src="https://kit.fontawesome.com/94a7d13274.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@4.0.7/build/intasend-inline.js"></script>
 
 
 </head> 
@@ -33,27 +35,38 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <div id="maincontainer">
-            <div class="herosectiondisplay">
-                <div id="herosection">
-                    <div id="herotitle"><span style="color: #35EAF0;">GIVING HOPE</span> <span style="font-size: clamp(0.5em, calc(1vw + 1rem), 2em);">|</span> <span style="color: #F018D3;">CHANGING LIVES</span></div>
-                    <div id="herotext">With the aim of enabling every child enrolled at Chogoria Boys High school to complete their course and realize their dreams. Chogoria Tuinuane is appealing to well-wishers to come on board and help raise funds towards a noble cause</div>
-                    <div id="supporttxt">Support us</div>
-                    <div id="arrow">↓</div>
-                    <a href="donate.html"><button id="herobtn">DONATE</button></a>
+        <div class="doncontainer">
+            <div class="donatearea">
+                <div class="dontitle">
+                    <div class="doninfotitle">Enter Amount</div>
+                    <hr>
                 </div>
-                <div class="heroconatinerimg">
-                    <div class="heroimg" id="heroimg1"></div>
-                    <div class="heroimg" id="heroimg2"></div>
-                </div>                
-            </div>
-            <div id="moneyraisedtxt">With over one million raised for needy students to date <br> <br> <span> <span style="color: #F018D3;">Join us</span>  and <span style="color: #35EAF0;">Give Hope</span> </span> </div>
+                <input  id="amount" type="number" min="10" placeholder="Amount" required  class="inputdetails">
+                <button  id="donatebtn" class="intaSendPayButton" data-amount="10" data-currency="KES">Donate</button>
+                <script>
+
+                    document.getElementById('amount').addEventListener('input', function() {
+                        var amount = this.value;
+                        document.getElementById('donatebtn').setAttribute('data-amount', amount);
+                    });
+                    new window.IntaSend({
+                    publicAPIKey: "ISPubKey_test_5d7dad04-cfeb-4a2d-9177-92c371f5c020",
+                    live: false,
+                    
+                    })
+                    .on("COMPLETE", (results) => {console.log("Do something on success", results)})
+                    .on("FAILED", (results) => {console.log("Do something on failure", results)})
+                    .on("IN-PROGRESS", (results) => {console.log("Payment in progress status", results)})
+
+                </script>
+            </div> 
+
+        
+
         </div>
+
     </main>
-
-
     <footer>
             <ul>
                 <li id="logofooter"><a href="index.html"><span style="color: #35EAF0;">Chogoria </span><span style="color: #F018D3;">Tuinuane</span></a></li>
@@ -70,6 +83,7 @@
                 
         
     </footer>
+
     <script>
         function showsidebar(){
                 const sidebar = document.querySelector('.sidebar')
@@ -81,5 +95,6 @@
         }
 
     </script>
+
 </body>
 </html>

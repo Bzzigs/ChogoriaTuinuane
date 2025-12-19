@@ -36,7 +36,7 @@ main{
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
-    border: solid rgba(0, 0, 0, 0.651);
+    border: solid rgba(0, 0, 0, 0.226);
     border-radius: 0.5em;
 
 }

@@ -1,0 +1,102 @@
+html{
+    height: 100%;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8ebf9;
+    min-height: 100%;
+
+}
+
+/* contact form */
+.doncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color: #F9F6F9;
+    border-radius: 1em;
+    padding: 1em;
+}
+.donatearea{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2em;
+}
+
+.dontitle{
+     font-size: clamp(0.2em, calc(1.5vw + 1rem), 3em);
+     color: #35EAF0;
+     font-weight: bold;
+     font-family: "Inclusive Sans", sans-serif;
+
+}
+.donatearea hr{
+    border: none;
+    width: 3em;
+    height: 0.1em;
+    background-color: #F018D3;
+}
+.inputdetails{
+    width: 30em;
+    height: 4em;
+    border-radius: 1em;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.donatearea textarea{
+    height: 10em;
+    padding: 1em;
+    border-radius: 1em;
+
+
+}
+.donatearea button{
+    background-color: #35EAF0;
+    padding: 0.8em;
+    font-size: clamp(0.4em, calc(0.3vw + 1rem), 3em);
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 300ms ease;
+    margin-bottom: 1em;
+}
+.donatearea button:hover{
+    transform: scale(1.1);
+}
+.inputdetails::placeholder{
+    color: #f018d3da;
+}
+
+.inputdetails:focus{
+    border: 0.1em solid #35eaf07c;
+}
+.inputdetails:hover{
+    border: 0.1em solid #35eaf07c;
+}
+
+@media  screen and (max-width:600px){
+    .donatearea{
+        width: 100%;
+    }
+    .inputdetails{
+        width: 100%;
+    }
+    
+}
