@@ -91,7 +91,7 @@ nav ul li.items a:hover::after{
     transform: scaleX(1.1);
 }
 /* sidebar */
-.itemssidebar li:not(:last-child):hover{
+.itemssidebar :hover{
     background-color: #FFFFFF;
 }
 
@@ -116,6 +116,9 @@ nav ul li.items a:hover::after{
 .itemssidebar{
     font-size: 1.4em;
     width: 100%;
+}
+.sidebar li #headbtnsidebar{
+    width: 0;
 }
 #menu-icon{
     display: none;
