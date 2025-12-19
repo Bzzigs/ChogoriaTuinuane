@@ -18,6 +18,17 @@ body{
 
 }
 
+a,
+a:link,
+a:visited {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+a:active {
+  background: transparent;
+}
+
 
 /* Header */
 nav{
