@@ -117,9 +117,11 @@ nav ul li.items a:hover::after{
     font-size: 1.4em;
     width: 100%;
 }
-.sidebar li #headbtnsidebar{
-    width: 0;
+.container ul li:last-child :hover{
+    background-color: none;
+    user-select: none;
 }
+
 #menu-icon{
     display: none;
 }
