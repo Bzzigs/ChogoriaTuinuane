@@ -91,9 +91,10 @@ nav ul li.items a:hover::after{
     transform: scaleX(1.1);
 }
 /* sidebar */
-.itemssidebar :hover{
+.itemssidebar li:not(:last-child):hover{
     background-color: #FFFFFF;
 }
+
 .sidebar{
     position: fixed;
     top: 0;
