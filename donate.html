@@ -39,27 +39,14 @@
         <div class="doncontainer">
             <div class="donatearea">
                 <div class="dontitle">
-                    <div class="doninfotitle">Enter Amount</div>
+                    <div class="doninfotitle">Send via paybill</div>
                     <hr>
                 </div>
-                <input  id="amount" type="number" min="10" placeholder="Amount" required  class="inputdetails">
-                <button  id="donatebtn" class="intaSendPayButton" data-amount="10" data-currency="KES">Donate</button>
-                <script>
+                <div id="amount"><div style="color: #F018D3;">PAYBILL:</div> <div style="color: #35EAF0; font-weight: bold;">247247</div></div>
+                
+                <div id="amount" ><div style="color: #F018D3;">ACC NO:</div> <div style="color: #35EAF0; font-weight: bold;">844622#Adm</div></div>
+                    <a href="index.html"><button id="donatebtn">THANK YOU!</button></a>
 
-                    document.getElementById('amount').addEventListener('input', function() {
-                        var amount = this.value;
-                        document.getElementById('donatebtn').setAttribute('data-amount', amount);
-                    });
-                    new window.IntaSend({
-                    publicAPIKey: "ISPubKey_test_5d7dad04-cfeb-4a2d-9177-92c371f5c020",
-                    live: false,
-                    
-                    })
-                    .on("COMPLETE", (results) => {console.log("Do something on success", results)})
-                    .on("FAILED", (results) => {console.log("Do something on failure", results)})
-                    .on("IN-PROGRESS", (results) => {console.log("Payment in progress status", results)})
-
-                </script>
             </div> 
 
         
