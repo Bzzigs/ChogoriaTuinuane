@@ -175,6 +175,7 @@ nav ul li.items a:hover::after{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 
 }
 .heroimg{
@@ -185,19 +186,27 @@ nav ul li.items a:hover::after{
     border-radius: 10px;
     transition: transform 300ms ease;
 
+
+
+}
+#seemore{
+    color: inherit;
+    text-decoration: none;
+    
+
 }
 .heroimg:hover{
     transform: scale(1.1);
 }
 
 #heroimg1{
-    background-image: url('images/help7.jpg');
+    background-image: url('images/TU17.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 #heroimg2{
-    background-image: url('images/help5.jpg');
+    background-image: url('images/TU18.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
